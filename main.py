@@ -1,17 +1,22 @@
 """Six Words, One Story -- make.fun entry.
 
 Writes one complete six-word story to /output/entry.txt.
+A lifetime of waiting ends in one unexpected apology.
 Pure standard library; deterministic; no network, no clock, no files read.
 """
 
 import os
 
-STORY = "Sold the house. Kept his chair."
+# One lifetime, one meeting, one apology.
+STORY = "I finally met God. He apologized."
 OUTPUT_PATH = "/output/entry.txt"
 
 
 def validate(text: str) -> None:
-    """The sealed gate: UTF-8 text, 1-60 chars, exactly six words."""
+    """The sealed gate: UTF-8 text, 1-60 chars, exactly six words.
+
+    Every word must earn its place: six words, one whole story.
+    """
     words = text.split()
     if len(words) != 6:
         raise ValueError(f"expected exactly 6 words, got {len(words)}")
